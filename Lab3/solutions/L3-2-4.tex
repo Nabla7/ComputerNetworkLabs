@@ -1,0 +1,7 @@
+The following fragmentation-related headers can be found in an IPv6 packet, combined into a Fragment extension header:
+\begin{enumerate}
+    \item "More fragments": Used to indicate that more IPv4 fragments will come
+    \item "Fragment Offset": Offset of the next fragment in the reassembled datagram
+    \item "Identification": used to identify to which datagram the fragment belongs, all fragments of a single datagram have the same value
+    \item "Next Header": used to identify the next fragment type or upper-level protocol (last fragment)
+\end{enumerate}

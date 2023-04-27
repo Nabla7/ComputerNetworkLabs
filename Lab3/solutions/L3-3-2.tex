@@ -1,0 +1,25 @@
+DHCP is used to automatically assign IP addresses and other network configuration parameters to devices on a network. The process follows a four-step process known as DORA: Discover, Offer, Request, and Acknowledge in our case. Consider the following excerpt from our trace:
+
+\begin{itemize}
+    \item 566	1086.803111	0.0.0.0	255.255.255.255	DHCP	342	DHCP Discover - Transaction ID 0x4102f926
+    \item 570	1087.811530	10.0.1.1	10.0.1.50	DHCP	342	DHCP Offer    - Transaction ID 0x4102f926
+    \item 571	1087.814344	0.0.0.0	255.255.255.255	DHCP	342	DHCP Request  - Transaction ID 0x4102f926
+    \item 572	1087.825656	10.0.1.1	10.0.1.50	DHCP	342	DHCP ACK      - Transaction ID 0x4102f926
+\end{itemize}
+
+
+
+
+
+Here's a breakdown of these packet types and their purposes:
+
+\begin{enumerate}
+    \item **DHCP Discover:** This is the first step in the DHCP process. The client device that wants to acquire an IP address sends out a DHCP Discover message. This is a broadcast message, which means it is sent to all devices on the network. The client device doesn't have an IP address at this point, so it uses the special broadcast address of 255.255.255.255. The source IP is 0.0.0.0, indicating that the client doesn't yet have an IP address.
+    \item **DHCP Discover:** This is the first step in the DHCP process. The client device that wants to acquire an IP address sends out a DHCP Discover message. This is a broadcast message, which means it is sent to all devices on the network. The client device doesn't have an IP address at this point, so it uses the special broadcast address of 255.255.255.255. The source IP is 0.0.0.0, indicating that the client doesn't yet have an IP address.
+    \item **DHCP Request:** Once the client receives a DHCP Offer, it needs to formally request to use the IP address offered. The client sends out a DHCP Request message, again as a broadcast, to indicate that it wants to accept the offer. This message also serves to inform any other DHCP servers on the network that their offers were not accepted.
+    \item **DHCP Acknowledge (ACK):** Finally, the DHCP server sends a DHCP ACK message back to the client. This message is an acknowledgement that the client is now allowed to use the IP address.
+\end{enumerate}
+
+
+
+

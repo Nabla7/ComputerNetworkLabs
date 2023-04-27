@@ -1,0 +1,10 @@
+Here we break down the source and destination IP addresses between the DHCP client and DHCP server per packet type:
+
+\begin{enumerate}
+    \item \textbf{DHCP Discover} - The client sends a broadcast message (DHCP Discover) to find a DHCP server in the network. In this stage, the source IP is 0.0.0.0 (representing a host that doesn't yet have an IP address) and the destination IP is 255.255.255.255 (representing a broadcast address reaching all devices in the network).
+    \item \textbf{DHCP Offer} - The DHCP server responds to the client with a DHCP Offer, which includes an available IP address for the client to use. The source IP is the IP address of the DHCP server (in this case, 10.0.1.1) and the destination IP is the address offered to the client (for example, 10.0.1.50 or 10.0.1.51 in our Wireshark logs).
+    \item \textbf{DHCP Request} - The client then sends a DHCP Request, formally asking to use the IP address offered by the server. Again, the source IP is 0.0.0.0 (as the client hasn't yet fully acquired an IP address) and the destination IP is the broadcast address 255.255.255.255.
+    \item \textbf{DHCP Acknowledgement (ACK)} - Finally, the server sends a DHCP ACK, confirming that the client can use the offered IP address. The source IP is the server's IP address (10.0.1.1) and the destination IP is the newly assigned IP address of the client.
+\end{enumerate}
+
+After the DHCP transaction, the client has its new IP address and can use it for further communications, with the client's new IP as the source IP. This is seen in subsequent DHCP Request packets in the Wireshark logs, which come from 10.0.1.50 and 10.0.1.51 (the assigned IP addresses for the clients) and are directed to the DHCP server at 10.0.1.1.

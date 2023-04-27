@@ -1,0 +1,60 @@
+Please refer to tables 3.4 and 3.5
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Option} & \textbf{Discover} & \textbf{Offer} & \textbf{Request} & \textbf{ACK} \\
+\hline
+DHCP Message Type (53) & Discover & Offer & Request & ACK \\
+\hline
+DHCP Server Identifier (54) & -- & 10.0.1.1 & 10.0.1.1 & 10.0.1.1 \\
+\hline
+IP Address Lease Time (51) & -- & Yes & -- & Yes \\
+\hline
+Subnet Mask (1) & -- & 255.255.255.0 & -- & 255.255.255.0 \\
+\hline
+Router (3) & -- & Yes & -- & Yes \\
+\hline
+Domain Name Server (6) & -- & Yes & -- & Yes \\
+\hline
+Requested IP Address (50) & -- & -- & 10.0.1.50 & -- \\
+\hline
+Host Name (12) & Yes & -- & Yes & -- \\
+\hline
+Parameter Request List (55) & Yes & -- & Yes & -- \\
+\hline
+End (255) & Yes & Yes & Yes & Yes \\
+\hline
+\end{tabular}
+\caption{DHCP Options Observed in Wireshark Output}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|p{10cm}|}
+\hline
+\textbf{Option} & \textbf{Interpretation} \\
+\hline
+DHCP Message Type (53) & Identifies the type of DHCP message (Discover, Offer, Request, or ACK). \\
+\hline
+DHCP Server Identifier (54) & Specifies the IP address of the DHCP server that sent the message. \\
+\hline
+IP Address Lease Time (51) & Indicates the duration for which the offered/requested IP address is valid. \\
+\hline
+Subnet Mask (1) & Specifies the subnet mask associated with the offered/requested IP address. \\
+\hline
+Router (3) & Indicates the default gateway/router's IP address for the network. \\
+\hline
+Domain Name Server (6) & Provides the IP address(es) of the Domain Name System (DNS) server(s) for the network. \\
+\hline
+Requested IP Address (50) & Contains the IP address that the client is requesting from the DHCP server. \\
+\hline
+Host Name (12) & Specifies the host name of the client sending the DHCP message. \\
+\hline
+Parameter Request List (55) & Contains a list of option codes that the client is requesting from the DHCP server. \\
+\hline
+End (255) & Marks the end of the options field in the DHCP message. \\
+\hline
+\end{tabular}
+\caption{Interpretation of DHCP Options}
+\end{table}

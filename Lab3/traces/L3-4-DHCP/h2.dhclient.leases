@@ -1,0 +1,91 @@
+lease {
+  interface "h2-eth0";
+  fixed-address 10.0.1.51;
+  option subnet-mask 255.255.255.0;
+  option dhcp-lease-time 120;
+  option routers 10.0.1.1;
+  option dhcp-message-type 5;
+  option dhcp-server-identifier 10.0.1.1;
+  option domain-name-servers 8.8.8.8;
+  renew 4 2023/04/27 15:34:31;
+  rebind 4 2023/04/27 15:35:24;
+  expire 4 2023/04/27 15:35:39;
+}
+lease {
+  interface "h2-eth0";
+  fixed-address 10.0.1.51;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.1.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.1.1;
+  renew 4 2023/04/27 15:38:26;
+  rebind 4 2023/04/27 15:39:16;
+  expire 4 2023/04/27 15:39:31;
+}
+lease {
+  interface "h2-eth0";
+  fixed-address 10.0.1.51;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.1.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.1.1;
+  renew 4 2023/04/27 15:39:13;
+  rebind 4 2023/04/27 15:40:11;
+  expire 4 2023/04/27 15:40:26;
+}
+lease {
+  interface "h2-eth0";
+  fixed-address 10.0.1.51;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.1.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.1.1;
+  renew 4 2023/04/27 15:40:07;
+  rebind 4 2023/04/27 15:40:58;
+  expire 4 2023/04/27 15:41:13;
+}
+lease {
+  interface "h2-eth0";
+  fixed-address 10.0.1.51;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.1.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.1.1;
+  renew 4 2023/04/27 15:40:58;
+  rebind 4 2023/04/27 15:41:52;
+  expire 4 2023/04/27 15:42:07;
+}
+lease {
+  interface "h2-eth0";
+  fixed-address 10.0.1.51;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.1.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.1.1;
+  renew 4 2023/04/27 15:41:56;
+  rebind 4 2023/04/27 15:42:43;
+  expire 4 2023/04/27 15:42:58;
+}
+lease {
+  interface "h2-eth0";
+  fixed-address 10.0.1.51;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.1.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.1.1;
+  renew 4 2023/04/27 15:42:42;
+  rebind 4 2023/04/27 15:43:41;
+  expire 4 2023/04/27 15:43:56;
+}

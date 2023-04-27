@@ -1,0 +1,5 @@
+R1, acting as a NAT (Network Address Translation) router, maintains a translation table that keeps track of active connections. When a host on the private network (such as h1 or h2) initiates a connection to a host on the public network (h3), r1 creates an entry in the translation table. This entry maps the private IP address and port number of the initiating host to the public IP address and port number used by the NAT router for the connection.
+
+When an SSH packet arrives from the public network destined for the public IP address and port number used by the NAT router, r1 looks up the corresponding private IP address and port number in the translation table. It then modifies the destination IP address and port number in the packet to match the private IP address and port number before forwarding the packet to the appropriate host on the private network.
+
+So, in our case, r1 knows which SSH packets to forward to h1 or h2 based on the information in its translation table. For each SSH connection initiated by h1 or h2, r1 will have a separate entry in the translation table.

@@ -1,0 +1,202 @@
+# The format of this file is documented in the dhcpd.leases(5) manual page.
+# This lease file was written by isc-dhcp-4.4.1
+
+# authoring-byte-order entry is generated, DO NOT DELETE
+authoring-byte-order little-endian;
+
+lease 10.0.2.50 {
+  starts 4 2023/04/27 15:33:00;
+  ends 4 2023/04/27 15:35:00;
+  tstp 4 2023/04/27 15:35:00;
+  cltt 4 2023/04/27 15:33:00;
+  binding state free;
+  hardware ethernet da:ce:7c:8a:2a:97;
+}
+lease 10.0.1.50 {
+  starts 4 2023/04/27 15:33:32;
+  ends 4 2023/04/27 15:35:32;
+  tstp 4 2023/04/27 15:35:32;
+  cltt 4 2023/04/27 15:33:32;
+  binding state free;
+  hardware ethernet 92:76:ee:69:b4:a1;
+}
+lease 10.0.1.51 {
+  starts 4 2023/04/27 15:33:39;
+  ends 4 2023/04/27 15:35:39;
+  tstp 4 2023/04/27 15:35:39;
+  cltt 4 2023/04/27 15:33:39;
+  binding state free;
+  hardware ethernet 8e:58:b8:d7:13:54;
+}
+server-duid "\000\001\000\001+\335N\346\316\350\020\362G\352";
+
+lease 10.0.1.50 {
+  starts 4 2023/04/27 15:36:50;
+  ends 4 2023/04/27 15:38:50;
+  cltt 4 2023/04/27 15:36:50;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet a2:0e:e8:97:e3:b8;
+  client-hostname "computernetwerken";
+}
+lease 10.0.1.51 {
+  starts 4 2023/04/27 15:37:31;
+  ends 4 2023/04/27 15:39:31;
+  cltt 4 2023/04/27 15:37:31;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet c6:92:61:c6:3d:20;
+  client-hostname "computernetwerken";
+}
+lease 10.0.1.50 {
+  starts 4 2023/04/27 15:37:37;
+  ends 4 2023/04/27 15:39:37;
+  cltt 4 2023/04/27 15:37:37;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet a2:0e:e8:97:e3:b8;
+  client-hostname "computernetwerken";
+}
+lease 10.0.2.50 {
+  starts 4 2023/04/27 15:38:04;
+  ends 4 2023/04/27 15:40:04;
+  cltt 4 2023/04/27 15:38:04;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet a2:c9:30:35:59:8d;
+  client-hostname "computernetwerken";
+}
+lease 10.0.1.51 {
+  starts 4 2023/04/27 15:38:26;
+  ends 4 2023/04/27 15:40:26;
+  cltt 4 2023/04/27 15:38:26;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet c6:92:61:c6:3d:20;
+  client-hostname "computernetwerken";
+}
+lease 10.0.1.50 {
+  starts 4 2023/04/27 15:38:34;
+  ends 4 2023/04/27 15:40:34;
+  cltt 4 2023/04/27 15:38:34;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet a2:0e:e8:97:e3:b8;
+  client-hostname "computernetwerken";
+}
+lease 10.0.2.50 {
+  starts 4 2023/04/27 15:39:00;
+  ends 4 2023/04/27 15:41:00;
+  cltt 4 2023/04/27 15:39:00;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet a2:c9:30:35:59:8d;
+  client-hostname "computernetwerken";
+}
+lease 10.0.1.51 {
+  starts 4 2023/04/27 15:39:13;
+  ends 4 2023/04/27 15:41:13;
+  cltt 4 2023/04/27 15:39:13;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet c6:92:61:c6:3d:20;
+  client-hostname "computernetwerken";
+}
+lease 10.0.1.50 {
+  starts 4 2023/04/27 15:39:34;
+  ends 4 2023/04/27 15:41:34;
+  cltt 4 2023/04/27 15:39:34;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet a2:0e:e8:97:e3:b8;
+  client-hostname "computernetwerken";
+}
+lease 10.0.2.50 {
+  starts 4 2023/04/27 15:39:49;
+  ends 4 2023/04/27 15:41:49;
+  cltt 4 2023/04/27 15:39:49;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet a2:c9:30:35:59:8d;
+  client-hostname "computernetwerken";
+}
+lease 10.0.1.51 {
+  starts 4 2023/04/27 15:40:07;
+  ends 4 2023/04/27 15:42:07;
+  cltt 4 2023/04/27 15:40:07;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet c6:92:61:c6:3d:20;
+  client-hostname "computernetwerken";
+}
+lease 10.0.1.50 {
+  starts 4 2023/04/27 15:40:31;
+  ends 4 2023/04/27 15:42:31;
+  cltt 4 2023/04/27 15:40:31;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet a2:0e:e8:97:e3:b8;
+  client-hostname "computernetwerken";
+}
+lease 10.0.2.50 {
+  starts 4 2023/04/27 15:40:39;
+  ends 4 2023/04/27 15:42:39;
+  cltt 4 2023/04/27 15:40:39;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet a2:c9:30:35:59:8d;
+  client-hostname "computernetwerken";
+}
+lease 10.0.1.51 {
+  starts 4 2023/04/27 15:40:58;
+  ends 4 2023/04/27 15:42:58;
+  cltt 4 2023/04/27 15:40:58;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet c6:92:61:c6:3d:20;
+  client-hostname "computernetwerken";
+}
+lease 10.0.1.50 {
+  starts 4 2023/04/27 15:41:23;
+  ends 4 2023/04/27 15:43:23;
+  cltt 4 2023/04/27 15:41:23;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet a2:0e:e8:97:e3:b8;
+  client-hostname "computernetwerken";
+}
+lease 10.0.2.50 {
+  starts 4 2023/04/27 15:41:29;
+  ends 4 2023/04/27 15:43:29;
+  cltt 4 2023/04/27 15:41:29;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet a2:c9:30:35:59:8d;
+  client-hostname "computernetwerken";
+}
+lease 10.0.1.51 {
+  starts 4 2023/04/27 15:41:56;
+  ends 4 2023/04/27 15:43:56;
+  cltt 4 2023/04/27 15:41:56;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet c6:92:61:c6:3d:20;
+  client-hostname "computernetwerken";
+}

@@ -1,0 +1,12 @@
+mininet> pingall
+*** Ping: testing reachability over IPv4 and IPv6
+h1 --IPv4--> h2 h3 X 
+h1 --IPv6--> h2 h3 X 
+h2 --IPv4--> h1 X X 
+h2 --IPv6--> h1 X X 
+h3 --IPv4--> h1 X X 
+h3 --IPv6--> h1 X h4 
+h4 --IPv4--> X X X 
+h4 --IPv6--> X X h3 
+*** Results: 58% dropped (10/24 received)
+

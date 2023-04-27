@@ -1,0 +1,7 @@
+The following fragmentation-related headers can be found in an IPv4 packet:
+\begin{enumerate}
+    \item "Don't fragment": IPv4 can also make use of PMTU-discovery to reduce fragmentation overhead in intermediate routers
+    \item "More fragments": Used to indicate that more IPv4 fragments will come
+    \item "Fragment Offset": Offset of the next fragment in the reassembled datagram
+    \item "Identification": used to identify to which datagram the fragment belongs, all fragments of a single datagram have the same value
+\end{enumerate}

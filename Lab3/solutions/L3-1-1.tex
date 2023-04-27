@@ -1,0 +1,12 @@
+The pings are as follows:
+\includetrace{ping.txt}
+
+In general, a ping from $h_{m}$ to $h_{n}$ was successful (given a particular IP version) if there is a line in the ping trace going from $h_{m}$ to $h_{m}$. For example, H1 was able to reach H2 and H3, but not H4. Each of the IPv4 pings explained:
+\begin{enumerate}
+    \item H1 to and from H2 (ping was successful): H1's IP address is 10.0.0.1/8, corresponding to a subnet 10.0.0.0/8. H2's IP address is 10.0.0.2/24, corresponding to a subnet 10.0.0.0/24. Because they are in the same subnet, they can reach each other.
+    \item H1 to and from H3 (ping was successful): H1's IP address is 10.0.0.1/8, corresponding to a subnet 10.0.0.0/8. H3's IP address is 10.0.255.3/16, corresponding to a subnet 10.0.0.0/16. Because they are in the same subnet, they can reach each other.
+    \item H1 to and from H4 (ping NOT successful): H1's IP address is 10.0.0.1/8, corresponding to a subnet 10.0.0.0/8. H4's IP address is 10.1.0.4/24, corresponding to a subnet 10.1.0.0/24. Because they are not in the same subnet, they cannot reach each other.
+    \item H2 to and from H4 (ping NOT successful): H2's IP address is 10.0.0.2/24, corresponding to a subnet 10.0.0.0/24. H4's IP address is 10.1.0.4/24, corresponding to a subnet 10.1.0.0/24. Because they are not in the same subnet, they cannot reach each other.
+    \item H2 to and from H3 (ping NOT successful): H2's IP address is 10.0.0.2/24, corresponding to a subnet 10.0.0.0/24. H3's IP address is 10.0.255.3/16, corresponding to a subnet 10.0.0.0/16. Because they are not in the same subnet, they cannot reach each other.
+    \item H3 to and from H4 (ping NOT successful): H3's IP address is 10.0.255.3/16, corresponding to a subnet 10.0.0.0/16. H4's IP address is 10.1.0.4/24, corresponding to a subnet 10.1.0.0/24. Because they are not in the same subnet, they cannot reach each other.
+\end{enumerate}

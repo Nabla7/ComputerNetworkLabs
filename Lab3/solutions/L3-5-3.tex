@@ -1,0 +1,3 @@
+The router r1 uses Network Address Translation (NAT) to determine how to forward packets to hosts in the private network. NAT maintains a translation table that keeps track of the original source and destination IP addresses and port numbers of outgoing packets, as well as the translated source IP address and port number.
+
+When r1 receives a ping response from h3 destined for the translated source IP address (128.66.0.1), it looks up the corresponding original source IP address and port number in the NAT translation table. If the original source IP address is 10.0.1.101 (h1), it forwards the packet to h1. If the original source IP address is 10.0.1.102 (h2), it forwards the packet to h2.

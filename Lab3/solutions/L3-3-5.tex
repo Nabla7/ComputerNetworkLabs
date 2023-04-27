@@ -1,0 +1,11 @@
+A host can send and receive DHCP packets without an IP address due to the nature of how DHCP and network protocols work. Here's a breakdown:
+
+\begin{enumerate}
+  \item \textbf{Broadcasting:} When a host first connects to a network and doesn't have an IP address, it sends a DHCP Discover packet as a broadcast message. This message is sent to the special broadcast IP address 255.255.255.255, which means all devices on the network will receive it. The host doesn't need to know its own IP address to send a broadcast.
+
+  \item \textbf{MAC Addresses:} Each network interface card (NIC) has a unique Media Access Control (MAC) address. This address is used at the data link layer of the network stack (Layer 2 in the OSI model) to identify devices. So, even though a host doesn't have an IP address (which operates at the network layer, or Layer 3), it can still send and receive packets using its MAC address.
+
+  \item \textbf{DHCP Process:} During the DHCP process, the DHCP server responds to the broadcast message from the host with a DHCP Offer packet. This packet is also broadcasted and includes the MAC address of the host it's intended for. The host recognizes its MAC address in the offer and can respond to the server with a DHCP Request message to accept the offered IP address. The server then sends a DHCP Acknowledge message, confirming the assignment of the IP address to the host. This entire process can occur without the host initially having an IP address.
+\end{enumerate}
+
+In summary, DHCP is designed to provide IP addresses to hosts that don't already have one

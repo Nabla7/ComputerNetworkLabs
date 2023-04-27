@@ -1,0 +1,48 @@
+\begin{verbatim}
+Consider the following 2 leases from traces/L3-4_DHCP/h1.dhclient.leases :
+
+lease {
+  interface "h1-eth0";
+  fixed-address 10.0.1.50;
+  option subnet-mask 255.255.255.0;
+  option dhcp-lease-time 120;
+  option routers 10.0.1.1;
+  option dhcp-message-type 5;
+  option dhcp-server-identifier 10.0.1.1;
+  option domain-name-servers 8.8.8.8;
+  renew 4 2023/04/27 15:34:28;
+  rebind 4 2023/04/27 15:35:17;
+  expire 4 2023/04/27 15:35:32;
+}
+lease {
+  interface "h1-eth0";
+  fixed-address 10.0.1.50;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.1.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.1.1;
+  renew 4 2023/04/27 15:37:37;
+  rebind 4 2023/04/27 15:38:35;
+  expire 4 2023/04/27 15:38:50;
+}
+\end{verbatim}
+
+Here's a breakdown of the entries in the lease file:
+
+\begin{enumerate}
+    \item \texttt{interface "h1-eth0";}: This specifies the interface that the lease applies to. Here it's "h1-eth0", which means the first Ethernet interface on host h1.
+    \item \texttt{fixed-address 10.0.1.50;}: This is the IP address that the DHCP server has assigned to the client for this lease.
+    \item \texttt{option subnet-mask 255.255.255.0;}: This is the subnet mask for the network. It defines the size of the network and the host component of the address.
+    \item \texttt{option dhcp-lease-time 120;}: This is the length of time in seconds for which the lease is valid. Here, the lease time is 120 seconds or 2 minutes.
+    \item \texttt{option routers 10.0.1.1;}: This is the IP address of the default gateway for the network. The client uses this address to send traffic to other networks.
+    \item \texttt{option dhcp-message-type 5;}: This indicates the type of DHCP message. The number 5 corresponds to DHCPACK, which is an acknowledgment message sent by the server in response to a DHCPREQUEST from the client.
+    \item \texttt{option dhcp-server-identifier 10.0.1.1;}: This is the IP address of the DHCP server that offered this lease.
+    \item \texttt{option domain-name-servers 8.8.8.8;}: This is the IP address of the DNS (Domain Name System) server that the client should use for name resolution. Here, it is Google's public DNS server.
+    \item \texttt{renew 4 2023/04/27 15:34:28;}: This is the time at which the client will try to renew the lease with the DHCP server. 
+    \item \texttt{rebind 4 2023/04/27 15:35:17;}: If the client hasn't been able to renew its lease by this time, it will start seeking a new lease from any DHCP server.
+    \item \texttt{expire 4 2023/04/27 15:35:32;}: If the lease isn't renewed or replaced by this time, the lease is no longer valid, and the client must stop using the IP address.
+\end{enumerate}
+
+The second lease is very similar to the first, but the renew, rebind, and expire times have all shifted, which indicates this is a new lease obtained after the expiry of the first one.

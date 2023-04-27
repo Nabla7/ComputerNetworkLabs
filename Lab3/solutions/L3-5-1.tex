@@ -1,0 +1,14 @@
+\begin{enumerate}
+  \item \textbf{h1 $\rightarrow$ h2:} This command succeeds because both h1 and h2 are on the same private network (10.0.1.0/24). They can communicate directly with each other without needing to go through the router (r1).
+
+  \item \textbf{h1 $\rightarrow$ h3:} This command succeeds because h1 is communicating to h3 through the router r1 which has NAT configured. The NAT on r1 translates the source IP address of packets from h1 (10.0.1.101) to its own public IP address (128.66.0.1) before forwarding them to h3. When h3 responds, the NAT translates the destination IP address back to h1's private IP address.
+
+  \item \textbf{h2 $\rightarrow$ r1 (eth0):} This command succeeds because h2 and r1's eth0 interface are on the same private network (10.0.1.0/24). They can communicate directly with each other.
+
+  \item \textbf{h2 $\rightarrow$ h3:} This command succeeds for the same reasons as the h1 $\rightarrow$ h3 command. The NAT on r1 translates the source IP address of packets from h2 before forwarding them to h3, and translates the destination IP address back when h3 responds.
+
+  \item \textbf{h3 $\rightarrow$ r1 (eth1):} This command succeeds because h3 and r1's eth1 interface are on the same public network (128.66.0.0/24). They can communicate directly with each other.
+
+  \item \textbf{h3 $\rightarrow$ h1:} This command succeeds since h3 has a route to the 10.0.1.0/24 network through r1. Although the NAT on r1 translates the source IP address of outgoing packets from h1 and h2, it doesn't translate the destination IP address of incoming packets for h1 and h2. However, because r1 has interfaces on both the private and public networks, h3 can reach h1 through r1.
+\end{enumerate}
+

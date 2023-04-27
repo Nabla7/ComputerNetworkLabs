@@ -1,0 +1,143 @@
+lease {
+  interface "h3-eth0";
+  fixed-address 10.0.2.50;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.2.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.2.1;
+  renew 4 2023/04/27 03:53:08;
+  rebind 4 2023/04/27 03:54:06;
+  expire 4 2023/04/27 03:54:21;
+}
+lease {
+  interface "h3-eth0";
+  fixed-address 10.0.2.50;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.2.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.2.1;
+  renew 4 2023/04/27 03:54:01;
+  rebind 4 2023/04/27 03:54:53;
+  expire 4 2023/04/27 03:55:08;
+}
+lease {
+  interface "h3-eth0";
+  fixed-address 10.0.2.50;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.2.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.2.1;
+  renew 4 2023/04/27 03:54:53;
+  rebind 4 2023/04/27 03:55:46;
+  expire 4 2023/04/27 03:56:01;
+}
+lease {
+  interface "h3-eth0";
+  fixed-address 10.0.2.50;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.2.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.2.1;
+  renew 4 2023/04/27 03:55:53;
+  rebind 4 2023/04/27 03:56:38;
+  expire 4 2023/04/27 03:56:53;
+}
+lease {
+  interface "h3-eth0";
+  fixed-address 10.0.2.50;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.2.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.2.1;
+  renew 4 2023/04/27 03:56:49;
+  rebind 4 2023/04/27 03:57:38;
+  expire 4 2023/04/27 03:57:53;
+}
+lease {
+  interface "h3-eth0";
+  fixed-address 10.0.2.50;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.2.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.2.1;
+  renew 4 2023/04/27 03:57:43;
+  rebind 4 2023/04/27 03:58:34;
+  expire 4 2023/04/27 03:58:49;
+}
+lease {
+  interface "h3-eth0";
+  fixed-address 10.0.2.50;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.2.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.2.1;
+  renew 4 2023/04/27 03:58:40;
+  rebind 4 2023/04/27 03:59:29;
+  expire 4 2023/04/27 03:59:44;
+}
+lease {
+  interface "h3-eth0";
+  fixed-address 10.0.2.50;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.2.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.2.1;
+  renew 4 2023/04/27 03:59:31;
+  rebind 4 2023/04/27 04:00:25;
+  expire 4 2023/04/27 04:00:40;
+}
+lease {
+  interface "h3-eth0";
+  fixed-address 10.0.2.50;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.2.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.2.1;
+  renew 4 2023/04/27 04:00:21;
+  rebind 4 2023/04/27 04:01:16;
+  expire 4 2023/04/27 04:01:31;
+}
+lease {
+  interface "h3-eth0";
+  fixed-address 10.0.2.50;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.2.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.2.1;
+  renew 4 2023/04/27 04:01:11;
+  rebind 4 2023/04/27 04:02:06;
+  expire 4 2023/04/27 04:02:21;
+}
+lease {
+  interface "h3-eth0";
+  fixed-address 10.0.2.50;
+  option subnet-mask 255.255.255.0;
+  option routers 10.0.2.1;
+  option dhcp-lease-time 120;
+  option dhcp-message-type 5;
+  option domain-name-servers 8.8.8.8;
+  option dhcp-server-identifier 10.0.2.1;
+  renew 4 2023/04/27 04:10:18;
+  rebind 4 2023/04/27 04:11:14;
+  expire 4 2023/04/27 04:11:29;
+}

@@ -1,0 +1,5 @@
+\begin{enumerate}
+  \item \textbf{IP bans:} When a service bans an IP address, it blocks all traffic from that IP, regardless of which specific host the traffic originated from. If multiple hosts share the same public IP address through NAT, a ban on that IP would affect all of them, even if only one host was responsible for the behavior that led to the ban. This can be especially problematic in shared networks, such as in a large household or a small office, where the actions of one user can inadvertently affect others.
+
+  \item \textbf{Traceability of suspicious traffic:} NAT can complicate the process of tracking down the source of suspicious traffic. When multiple hosts share a public IP address, incoming traffic to that IP must be distributed to the correct host based on translation entries in the NAT router. However, from an external perspective, all traffic appears to come from the same IP, making it difficult to identify which specific host is responsible for any given traffic. This can hinder efforts to investigate security incidents or enforce acceptable use policies.
+\end{enumerate}

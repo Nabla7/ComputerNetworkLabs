@@ -1,0 +1,5 @@
+According to RFC 2131, DHCP clients may not know their network address when they are configured, hence the servers need a mechanism to send replies to clients that is not dependent on knowing the network address of the client. 
+
+To address this challenge, the server temporarily 'reserves' the offered network address for the client and communicates the duration of the reservation to the client in a lease. Once the client receives a lease, it is free to configure its network interface with the assigned address. A DHCP client uses a 'binding' to record its lease, along with other information about the lease, e.g., the duration of the lease, the address of the DHCP server that issued the lease, and so on.
+
+The use of fixed UDP port numbers (67 for server, 68 for client) allows the DHCP communication to happen reliably in this unique scenario. This design choice ensures that the DHCP server can send a message to a client that doesn't yet have an IP address, and that the client knows which port to listen on for the server's message.
