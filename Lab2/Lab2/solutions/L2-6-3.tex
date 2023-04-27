@@ -1,0 +1,8 @@
+It's performed as follows:
+\begin{itemize}
+    \item h1 sends a big packet to h2.
+    \item r1 sees the packet is too big for the link to h2.
+    \item r1 drops the packet and tells h1 the maximum allowed size (1280 bytes).
+    \item h1 adjusts packet size to 1280 bytes or less.
+    \item h1 sends smaller packets to h2, avoiding the need for fragmentation.
+\end{itemize}

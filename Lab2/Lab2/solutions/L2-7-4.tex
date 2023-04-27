@@ -1,0 +1,9 @@
+The last 4 packets in the trace are the packets involved in closing the connection. The flags in these packets are FIN, ACK, FIN and ACK respectively. 
+The process of closing a TCP connection is called the four-way handshake, which consists of the following steps:
+\begin{itemize}
+    \item FIN: The client (h1) sends a packet with the FIN flag set to indicate that it has finished sending data and wants to close the connection.
+    \item ACK: The server (h2) sends a packet with the ACK flag set to acknowledge the receipt of the FIN packet from the client.
+    \item FIN: The server (h2) sends a packet with the FIN flag set to indicate that it has also finished sending data and wants to close the connection.
+    \item ACK: The client (h1) sends a packet with the ACK flag set to acknowledge the receipt of the FIN packet from the server.
+\end{itemize}
+

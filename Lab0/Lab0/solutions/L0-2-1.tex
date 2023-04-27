@@ -1,0 +1,17 @@
+\linktrace{pcap} \newline
+\newline
+If we have a look at packet 5 in the libpcap trace, whose Protocol is ICMP then we find that this protocol has the following fields: \begin{itemize}
+    \item Type
+    \item Code
+    \item Checksum
+    \item Checksum Status
+    \item Identifier (BE)
+    \item Identifier (LE)
+    \item Sequence number (BE)
+    \item Sequence number (LE)
+    \item Response frame
+    \item Timestamp from icmp data
+    \item Timestamp from icmp data (relative)
+    \item Data
+\end{itemize}
+ The amount of data present in packet 5 is 48 bytes. The number of bytes required to actually transmit the data seems to be 98, as it says that 98 bytes were "on wire".

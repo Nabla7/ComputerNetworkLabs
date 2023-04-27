@@ -1,0 +1,9 @@
+There are 3 cases where packets may be retransmitted:
+
+\begin{itemize}
+    \item RTO: Sender resends if no acknowledgment within timeout, even if not actually lost.
+
+    \item Out-of-order: Receiver sends duplicate ACKs for last in-order packet. 3 duplicate ACKs trigger Fast Retransmit, but may result in unnecessary retransmissions.
+
+    \item Spurious Retransmissions: Resending may occur due to network issues, even if packet correctly received. Caused by factors like latency spikes, congestion, or sender misinterpretation.
+\end{itemize}

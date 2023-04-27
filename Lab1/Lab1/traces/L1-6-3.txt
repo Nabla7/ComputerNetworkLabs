@@ -1,0 +1,1 @@
+HTTP/1.1 301 Moved Permanently\r\nContent-Length: 0\r\nConnection: close\r\nDate: Sun, 05 Mar 2023 10:12:13 GMT\r\nServer: Kestrel\r\nLocation: https://www.uantwerpen.be\r\n\r\n

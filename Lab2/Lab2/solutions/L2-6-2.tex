@@ -1,0 +1,1 @@
+Unlike IPv4, IPv6 does not allow routers to fragment packets. Instead, when a router receives a packet that is too large to be forwarded over the next link with a smaller MTU, it drops the packet and sends an ICMPv6 "Packet too big" message back to the sender. We can find multiple such "Packet too big" messages in the trace.

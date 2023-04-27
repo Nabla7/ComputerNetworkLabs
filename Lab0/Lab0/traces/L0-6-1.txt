@@ -1,0 +1,5 @@
+21:24:13.914537 IP6 fc00:0:0:1::1 > fc00:0:0:1::2: ICMP6, echo request, seq 1, length 64
+21:24:13.914618 IP6 fc00:0:0:1::2 > fc00:0:0:1::1: ICMP6, echo reply, seq 1, length 64
+21:24:14.917031 IP6 fc00:0:0:1::1 > fc00:0:0:1::2: ICMP6, echo request, seq 2, length 64
+21:24:14.917111 IP6 fc00:0:0:1::2 > fc00:0:0:1::1: ICMP6, echo reply, seq 2, length 64
+

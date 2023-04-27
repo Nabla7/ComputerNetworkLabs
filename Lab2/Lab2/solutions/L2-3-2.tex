@@ -1,0 +1,1 @@
+The maximum size size of an UDP datagram without fragmentation is equal to the MTU of the underlying link layer minus the size of IP headers. If we have Ethernet as our link layer (MTU of 1500), and use IPv6 (40 bytes header), we have 1460 bytes left for the UDP datagram. Since UDP has 8 bytes of headers, 1452 bytes are used for the payload.

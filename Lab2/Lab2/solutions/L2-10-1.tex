@@ -1,0 +1,11 @@
+The first experiment consists of 4 hosts connected by a single switch. The script for this can be found in \linktrace{1.py}. Host 4 will serve as the receiving end of 3 TCP connections. All 4 links have been limited to a bandwidth of 1 mbps. Hosts 1, 2 and 3 will attempt to send 1 data at a rate of 1 mbps. To run the experiment, we first launch Mininet and open open 3 terminals on h4, and 1 terminal for h1, h2 and h3. We start an iperf3 server on the 3 terminals running on h4, assigning a different port number to each. Then, we start 3 iperf3 sessions from terminals running on hosts 1, 2 and 3. The output for the sessions can be found in:
+\begin{enumerate}
+    \item \linktrace{experiment-1-session-1-client.txt}
+    \item \linktrace{experiment-1-session-1.txt}
+    \item \linktrace{experiment-1-session-2-client.txt}
+    \item \linktrace{experiment-1-session-2.txt}
+    \item \linktrace{experiment-1-session-3-client.txt}
+    \item \linktrace{experiment-1-session-3.txt}
+\end{enumerate}
+
+We exclude the first couple of packets since the clients did not start at the same time. Looking at the server logs for all 3 sessions, we notice how the bandwidth was split up equally for all 3 sessions/hosts.

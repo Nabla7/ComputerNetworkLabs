@@ -1,0 +1,267 @@
+%!TEX root = lab1.tex
+
+\setcounter{chapter}{0}
+\chapter{The Application layer}
+
+What you will learn in this lab:
+\begin{itemize}
+	\item How \acs{http} works and how the packets look like
+	\item How you can write your own \acs{http} requests
+	\item How \acs{dns} works
+\end{itemize}
+
+\newpage
+\subsection{The \ac{http}}
+\emph{Based on Wireshark Lab: HTTP, Supplement to Computer Networking: A Top-Down Approach, 8th ed., J.F. Kurose and K.W. Ross}
+
+When people visit webpages, these pages are requested and served using the \ac{http} protocol. In these first exercises we take a closer look at how the communication works and how the packets look like.
+
+\begin{exercise}{Running simple \ac{http} requests}
+\begin{enumerate}
+	\item Start up your web browser. While doing these exercises, make sure that you turn off all applications that use an Internet connection and any other browsers. By doing this you will eliminate as much unwanted packets as possible.
+	\item Apple users: make sure that the \emph{Private Relay} optional feature is turned off!
+	\item \emph{Do not use Safari as web browser for this exercise!} Firefox, Chrome or Edge are good browsers to do this exercise with.
+	\item Make sure your browser cache is cleared. In Firefox, go to \emph{Settings -> Privacy \& Security -> Cookies and Site Data}, and use the \emph{Clear data...} button to remove all cached web content. In Microsoft Edge, go to \emph{Settings -> Privacy, search and services -> Clear browsing data}, and then click on \emph{Choose what to clear}. Make sure Cached files and images are cleared. In Chrome, this is similarly done by navigating to \emph{Settings -> Security and Privacy -> Clear browsing data}.
+	\item Start up the Wireshark packet sniffer, as described in the Introductory lab (but don’t yet begin packet capture). Enter ``http'' (just the letters, not the quotation marks) in the display-filter-specification window, so that only captured \ac{http} messages will be displayed later in the packet-listing window. (We’re only interested in the \ac{http} protocol here, and don’t want to see the clutter of all captured packets). 
+	\item Begin the Wireshark packet capture. 
+	\item Enter the following to your browser:\\\url{http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file1.html}. \\Your browser should display a very simple, one-line HTML file. 
+	\item Stop Wireshark packet capture and save the results of the captures traffic as libpcap file called \file{pcapng}. 
+\end{enumerate}
+
+Your Wireshark output should look similar to the window shown in Figure \ref{fig:wireshark-http}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{graphics/wireshark-http.png}	
+	\caption{Wireshark output after our \ac{http} request.}
+	\label{fig:wireshark-http}
+\end{figure}
+
+The example in Figure \ref{fig:wireshark-http} shows in the packet-listing window that two \ac{http} messages were captured: the GET message (from your browser to the gaia.cs.umass.edu web server) and the response message from the server to your browser. The packet-contents window shows details of the selected message (in this case the \ac{http} OK message, which is highlighted in the packet-listing window). Recall that since the \ac{http} message was carried inside a TCP segment, which was carried inside an IP datagram, which was carried within an Ethernet frame, Wireshark displays the Frame, Ethernet, IP, and TCP packet information as well. We want to minimize the amount of non-\ac{http} data displayed (we’re interested in \ac{http} here, and will be investigating these other protocols is later labs), so make sure the boxes at the far left of the Frame, Ethernet, IP and TCP information have a plus sign or a right-pointing triangle (which means there is hidden, non-displayed information), and the \ac{http} line has a minus sign or a down-pointing triangle (which means that all information about the \ac{http} message is displayed). 
+
+\textbf{Use the data captured with Wireshark in \linktrace[1]{pcapng} to answer the questions.} In your answers, refer to the packets in the Wireshark capture and explain how you come to the correct answer.
+
+\question{Is your browser running \ac{http} version 1.0 or 1.1? What version of \ac{http} is the server running?}{1}
+\question{What languages (if any) does your browser indicate is/are the natural language it is set to and prefers?}{1}
+\question{What is the IP address of your computer? Of the \texttt{gaia.cs.umass.edu} server?}{1}
+\question{What is the status code returned from the server to your browser?}{1}
+\question{When was the HTML file that you are retrieving last modified at the server?}{1}
+\question{How many bytes of content are being returned to your browser?}{1}
+\question{What is the type of web server that is running at \texttt{gaia.cs.umass.edu}?}{1}
+\end{exercise}
+
+\begin{exercise}{The \ac{http} Conditional GET/response interaction}
+\begin{enumerate}
+	\item Start up your web browser, and make sure your browser’s cache is cleared, as discussed above. 
+	\item Start up the Wireshark packet sniffer 
+	\item Enter the following URL into your browser:\\ \url{http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file2.html}.
+	\\Your browser should display a very simple five-line HTML file. 
+	\item Quickly enter the same URL into your browser again (or simply select the refresh button on your browser) 
+	\item Stop Wireshark packet capture and save the results of the captures traffic as libpcap file called \file{pcapng}. Enter ``http'' in the display-filter-specification window, so that only captured \ac{http} messages will be displayed later in the packet-listing window. 
+\end{enumerate}
+
+\textbf{Use the data captured with Wireshark in \linktrace[1]{pcapng} to answer the questions.}
+
+\question{Inspect the contents of the first \ac{http} GET request from your browser to the server. Do you see an ``If-Modified-Since'' field in the \ac{http} GET?}{1}
+\question{Inspect the contents of the server response. Did the server explicitly return the contents of the file? How can you tell?}{1} 
+\question{Now inspect the contents of the second \ac{http} GET request from your browser to the server. Do you see an ``If-Modified-Since'' field in the \ac{http} GET? If so, what information follows the ``If-Modified-Since'' header? What is its purpose?}{1}
+\question{What is the \ac{http} status code and phrase returned from the server in response to this second \ac{http} GET? Did the server explicitly return the contents of the file? Explain.}{1}
+\end{exercise}
+
+\begin{exercise}{Retrieving long documents}
+\begin{enumerate}
+	\item Start up your web browser, and make sure your browser’s cache is cleared, as discussed above. 
+	\item Start up the Wireshark packet sniffer 
+	\item Make sure that the following options are \textbf{unselected} in Wireshark: go to \emph{Edit -> Preferences -> Protocols -> HTTP} and \textbf{turn off} all the options that start with \emph{Reassemble}.
+	\item Enter the following URL into your browser:\\ \url{http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file3.html}.\\
+	Your browser should display the rather lengthy US Bill of Rights. 
+	\item Stop Wireshark packet capture and save the results of the captures traffic as libpcap file called \file{pcapng}. Enter ``http'' in the display-filter-specification window, so that only captured \ac{http} messages will be displayed. 
+\end{enumerate}
+
+In the packet-listing window, you should see your \ac{http} GET message, followed by a multiple-packet TCP response to your \ac{http} GET request. This multiple-packet response deserves a bit of explanation. Recall that the \ac{http} response message consists of a status line, followed by header lines, followed by a blank line, followed by the entity body. In the case of our \ac{http} GET, the entity body in the response is the entire requested HTML file. In our case here, the HTML file is rather long, and at 4500 bytes is too large to fit in one TCP packet. The single \ac{http} response message is thus broken into several pieces by TCP, with each piece being contained within a separate TCP segment. In recent versions of Wireshark, Wireshark indicates each TCP segment as a separate packet, and the fact that the single \ac{http} response was fragmented across multiple TCP packets is indicated by the ``TCP segment of a reassembled PDU'' in the Info column of the Wireshark display. Earlier versions of Wireshark used the ``Continuation'' phrase to indicated that the entire content of an \ac{http} message was broken across multiple TCP segments.. We stress here that there is no ``Continuation'' message in \ac{http}!
+
+\textbf{Use the data captured with Wireshark in \linktrace[1]{pcapng} to answer the questions.}
+
+\question{How many \ac{http} GET request messages did your browser send? Which packet number in the trace contains the GET message for the Bill or Rights?}{1}
+\question{Which packet number in the trace contains the status code and phrase associated 
+with the response to the \ac{http} GET request?}{1}
+\question{What is the status code and phrase in the response?}{1}
+\question{How many data-containing TCP segments were needed to carry the single \ac{http} response and the text of the Bill of Rights?}{1}
+\end{exercise}
+
+
+\begin{exercise}{HTML documents with embedded objects}
+\begin{enumerate}
+	\item{Start up your web browser, and make sure your browser's cache is cleared.}
+	\item{Start up the Wireshark packet sniffer}
+	\item{Enter the following URL into your browser:\\ \url{http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html}.\\
+	Your browser should display a short HTML file with two images. These two images are referenced in the base HTML file. That is, the images themselves are not contained in the HTML; instead the URLs for the images are contained in the downloaded HTML file. As discussed in the textbook, your browser will have to retrieve these logos from the indicated web sites. Our publisher's logo is retrieved from the \texttt{gaia.cs.umass.edu} web site. The image of the cover for our 5th edition (one of our favourite covers) is stored at the \texttt{caite.cs.umass.edu} server. (These are two different web servers inside \texttt{cs.umass.edu}).}
+	\item{Stop the Wireshark packet capture and save the results of the captures traffic as libpcap file called \file{pcapng}. Enter ``http'' in the display-filter-specification window, so that only captured \ac{http} messages will be displayed.}
+\end{enumerate}
+
+\textbf{Use the data captured with Wireshark in \linktrace[1]{pcapng} to answer the questions.}
+
+\question{How many \ac{http} GET request messages did your browser send? To which Internet addresses were these GET requests sent?}{1}
+\question{Can you tell whether your browser downloaded the two images serially, or whether they were downloaded from the two web sites in parallel? Explain.}{1}
+\end{exercise}
+
+\begin{exercise}{\ac{http} Authentication}
+Finally, let's try visiting a web site that is password-protected and examine the sequence of \ac{http} messages exchanged for such a site. The URL \url{http://gaia.cs.umass.edu/wireshark-labs/protected\_pages/HTTP-wireshark-file5.html} is password protected.\\
+The username is \emph{wireshark-students}, and the password is \emph{network}. So let's access this ``secure'' password-protected site.
+
+\begin{enumerate}
+	\item Make sure your browser's cache is cleared, as discussed above, and close down your browser. Then, start up your browser 
+	\item Start up the Wireshark packet sniffer 
+	\item Enter the following URL into your browser:\\ \url{http://gaia.cs.umass.edu/wireshark-labs/protected\_pages/HTTP-wireshark- file5.html}.\\
+	Type the requested username and password into the pop-up box. 
+	\item Stop Wireshark packet capture and save the results of the captures traffic as libpcap file called \file{pcapng}. Enter ``http'' in the display-filter-specification window, so that only captured \ac{http} messages will be displayed later in the packet-listing window. 
+\end{enumerate}
+
+\textbf{Use the data captured with Wireshark in \linktrace[1]{pcapng} to answer the questions.}
+
+\question{What is the server's response (status code and phrase) in response to the initial \ac{http} GET message from your browser?}{1}
+\question{When your browser sends the \ac{http} GET message for the second time, what new field is included in the \ac{http} GET message?}{1} 
+
+The username (wireshark-students) and password (network) that you entered are encoded in the string of characters (\texttt{d2lyZXNoYXJrLXN0dWRlbnRzOm5ldHdvcms=}) following the ``Authorization: Basic'' header in the client's \ac{http} GET message. While it may appear that your username and password are encrypted, they are simply encoded in a format known as Base64 format. The username and password are not encrypted! To see this, simply click on the Authorization field in Wireshark to expand it. Voila! You have translated from Base64 encoding to ASCII encoding, and thus should see your username and password! Since anyone can download a tool like Wireshark and sniff packets (not just their own) passing by their network adaptor, and anyone can translate from Base64 to ASCII (Wireshark already does this for you!), it should be clear to you that simple passwords on HTTP sites are not secure unless additional measures are taken (e.g. the use of HTTPS). 
+\end{exercise}
+
+\newpage
+\subsection{Create your own HTTP requests}
+Until now, we used a browser to retrieve pages via \ac{http}. By using these applications we do not have to write the request to web servers ourselves. In the following exercises we are going to write our own request and send them to a web server. We will do so by using the Python3 library \texttt{socket}. More information on this library can be found on \url{https://docs.python.org/3/howto/sockets.html#socket-howto}
+
+You can create a socket connection using the following functions:
+\begin{lstlisting}
+    client = socket(AF_INET, SOCK_STREAM)
+    client.connect((host, port))
+\end{lstlisting} 
+   
+To send and receive bytes you can use the following functions, for receiving you always have to indicate the amount of bytes to receive.
+\begin{lstlisting}
+    client.send(request_in_bytes)
+    response_in_bytes = client.recv(4096)
+\end{lstlisting}
+
+\emph{Note: when adding a newline to the request, use \texttt{\textbackslash r\textbackslash n} in Python to ensure that the server can interpret your request correctly.}\\
+\emph{Note: do not forget to convert your request (string) to bytes and back (for the response).}\\
+\emph{Note: if you get the ``400 Bad Request'' response in any of the following exercises, this means your request was malformed, so you should correct it.}
+
+\begin{exercise}{Creating \ac{http} requests}
+Use the \texttt{socket} library to write \ac{http} requests and print the response to your screen.
+
+\question{Write a python script that sends a request for the home page of \texttt{www.google.be}. Save your script to \file{py}. Verify that your script works and include it here.}{1}
+
+\question{Write a request to retrieve the following page:\\ \texttt{http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html}.\\
+ Save it to \file[2]{py}. Include your script here, as well as the response you received. You do not have to download the images via separate requests.}{1}
+
+\question{Write a request for the home page of \texttt{www.uantwerpen.be}, save it to \file[3]{py}. Include your python script here, as wel as the response.}{1}
+
+\question{Explain the response you got from \texttt{www.uantwerpen.be}, why did you get this response message?}{1}
+
+\question{Now try to request the home page of \texttt{www.uantwerpen.be} by sending the request to \texttt{www.google.be}. Save your script to \file[4]{py} and include it here, as well as the response.}{1}
+
+\question{Explain the previous response you got, why did you get this response message?}{1}
+
+\end{exercise}
+
+\newpage
+\subsection{\ac{dns}}
+\subsubsection{Clearing your \ac{dns} cache}
+To ensure that you get the correct \ac{dns} queries, you can explicitly clear the records in your \ac{dns} cache.  There's no harm in doing so - it just means that your computer will need to invoke the distributed \ac{dns} service next time it needs to use the \ac{dns} name resolution service, since it will find no records in the cache.  
+\begin{itemize}
+\item On a Mac computer, you can enter the following command into a terminal window to clear your \ac{dns} resolver cache:
+\begin{cmdblock}[gobble=1]
+	% sudo killall -HUP mDNSResponder
+\end{cmdblock}
+
+\item On a Windows computer you can enter the following command at the command prompt:
+\begin{cmdblock}[gobble=1]
+	% ipconfig /flushdns 
+\end{cmdblock}
+
+\item On a Linux computer, enter:
+\begin{cmdblock}[gobble=1]
+	% sudo systemd-resolve --flush-caches
+\end{cmdblock}
+\end{itemize}
+
+\begin{exercise}{DNS queries}
+Let’s first capture the DNS messages that are generated by ordinary Web-surfing activity.
+\begin{enumerate}
+	\item Clear the \ac{dns} cache in your host, as described above.
+	\item Open your Web browser and clear your browser cache. 
+	\item Open Wireshark and enter \texttt{ip.addr == <your\_IP\_address>} into the display filter, where \texttt{<your\_IP\_address>}  is the IPv4 address of your computer . With this filter, Wireshark will only display packets that either originate from, or are destined to, your host. 
+	\item Start packet capture in Wireshark.
+	\item With your browser, visit the Web page: \url{http://gaia.cs.umass.edu/kurose\_ross/}
+	\item Stop the packet capture and save the results of the captures traffic as libpcap file called \file{pcapng}. 
+\end{enumerate}
+
+\textbf{Use the data captured with Wireshark in \linktrace[1]{pcapng} to answer the questions.}
+
+\question{Locate the first \ac{dns} query message resolving the name \texttt{gaia.cs.umass.edu}. What is the packet number  in the trace for the \ac{dns} query message?  Is this query message sent over UDP or TCP?}{1}
+
+\question{Now locate the corresponding \ac{dns} response to the initial \ac{dns} query. What is the packet number in the trace for the \ac{dns} response message?  Is this response message received via UDP or TCP?}{1}
+
+\question{What is the destination port for the \ac{dns} query message? What is the source port of the DNS response message?}{1}
+
+\question{To what IP address is the \ac{dns} query message sent?}{1}
+
+\question{Examine the \ac{dns} query message. How many ``questions'' does this \ac{dns} message contain? How many ``answers'' does it contain?}{1}
+
+\question{Examine the \ac{dns} response message to the initial query message. How many ``questions'' does this \ac{dns} message contain? How many ``answers'' does it contain?}{1}
+
+\question{The web page for the base file \texttt{http://gaia.cs.umass.edu/kurose\_ross/} references the image object \texttt{http://gaia.cs.umass.edu/kurose\_ross/header\_graphic\_book\_8E3.jpg},\\ which, like the base webpage, is on \texttt{gaia.cs.umass.edu}.  
+
+What is the packet number in the trace for the initial HTTP GET request for the base file\\ \texttt{http://gaia.cs.umass.edu/kurose\_ross/}?  
+
+What is the packet number in the trace of the \ac{dns} query made to resolve \texttt{gaia.cs.umass.edu} so that this initial HTTP request can be sent to the \texttt{gaia.cs.umass.edu} IP address?    
+
+What is the packet number in the trace of the received \ac{dns} response? 
+
+What is the packet number in the trace for the HTTP GET request for the image object\\ \texttt{http://gaia.cs.umass.edu/kurose\_ross/header\_graphic\_book\_8E3.jpg}? 
+
+What is the packet number in the \ac{dns} query made to resolve \texttt{gaia.cs.umass.edu} so that this second HTTP request can be sent to the \texttt{gaia.cs.umass.edu} IP address? 
+
+Discuss how \ac{dns} caching affects the answer to this last question.}{1}
+\end{exercise}
+
+\begin{exercise}{\texttt{nslookup} for type A records}
+Now let's play with \texttt{nslookup}. 
+\begin{enumerate}
+	\item Start a packet capture. 
+	\item Do an \incommand{nslookup} on www.cs.umass.edu
+	\item Stop the packet capture and save the results of the captured traffic as libpcap file called \file{pcap}ng. 
+\end{enumerate}
+
+\textbf{Use the data captured with Wireshark in \linktrace[1]{pcapng} to answer the questions.}
+
+\question{What is the destination port for the \ac{dns} query message? What is the source port of the \ac{dns} response message?}{1}
+
+\question{To what IP address is the \ac{dns} query message sent? Is this the IP address of your default local \ac{dns} server?}{1}
+
+\question{Examine the \ac{dns} query message. What ``Type'' of \ac{dns} query is it? Does the query message contain any ``answers''?}{1}
+
+\question{Examine the \ac{dns} response message to the query message. How many ``questions'' does this \ac{dns} response message contain? How many ``answers''?}{1}
+\end{exercise}
+
+\begin{exercise}{\texttt{nslookup} for type NS records}
+Last, let’s use \texttt{nslookup} to issue a command that will return a type NS \ac{dns} record.
+\begin{enumerate}
+\item Start a packet capture.
+\item Enter the following command:
+\begin{cmdblock}[gobble=1]
+	% nslookup –type=NS umass.edu
+\end{cmdblock}
+\item Stop the packet capture and save the results of the captured traffic as libpcap file called \file{pcapng}. 
+\end{enumerate}
+
+\textbf{Use the data captured with Wireshark in \linktrace[1]{pcapng} to answer the questions.}
+	
+\question{To what IP address is the \ac{dns} query message sent? Is this the IP address of your default local \ac{dns} server?}{1}
+\question{Examine the \ac{dns} query message. How many questions does the query have? Does the query message contain any ``answers''?}{1}
+\question{Examine the \ac{dns} response message.  How many answers does the response have?  What information is contained in the answers? How many additional}{1}
+\end{exercise}
+
+\newpage
+
+
+

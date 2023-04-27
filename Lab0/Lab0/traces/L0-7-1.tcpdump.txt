@@ -1,0 +1,43 @@
+22:25:05.774960 IP6 fe80::cc2e:58ff:fed3:a058 > ff02::1: ICMP6, echo request, seq 1, length 64
+22:25:05.775068 IP6 fe80::6c45:83ff:fe5a:d8a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, echo reply, seq 1, length 64
+22:25:05.775128 IP6 fe80::a001:7cff:fe5d:a75 > fe80::cc2e:58ff:fed3:a058: ICMP6, echo reply, seq 1, length 64
+22:25:05.775129 IP6 fe80::303d:f5ff:fe1c:e9a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, echo reply, seq 1, length 64
+22:25:06.773919 IP6 fe80::cc2e:58ff:fed3:a058 > ff02::1: ICMP6, echo request, seq 2, length 64
+22:25:06.773978 IP6 fe80::6c45:83ff:fe5a:d8a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, echo reply, seq 2, length 64
+22:25:06.774022 IP6 fe80::a001:7cff:fe5d:a75 > fe80::cc2e:58ff:fed3:a058: ICMP6, echo reply, seq 2, length 64
+22:25:06.774023 IP6 fe80::303d:f5ff:fe1c:e9a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, echo reply, seq 2, length 64
+22:25:10.831766 IP6 fe80::6c45:83ff:fe5a:d8a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, neighbor solicitation, who has fe80::cc2e:58ff:fed3:a058, length 32
+22:25:10.832396 IP6 fe80::cc2e:58ff:fed3:a058 > fe80::6c45:83ff:fe5a:d8a9: ICMP6, neighbor advertisement, tgt is fe80::cc2e:58ff:fed3:a058, length 24
+22:25:10.832286 IP6 fe80::303d:f5ff:fe1c:e9a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, neighbor solicitation, who has fe80::cc2e:58ff:fed3:a058, length 32
+22:25:10.832421 IP6 fe80::cc2e:58ff:fed3:a058 > fe80::303d:f5ff:fe1c:e9a9: ICMP6, neighbor advertisement, tgt is fe80::cc2e:58ff:fed3:a058, length 24
+22:25:10.832289 IP6 fe80::a001:7cff:fe5d:a75 > fe80::cc2e:58ff:fed3:a058: ICMP6, neighbor solicitation, who has fe80::cc2e:58ff:fed3:a058, length 32
+22:25:10.832439 IP6 fe80::cc2e:58ff:fed3:a058 > fe80::a001:7cff:fe5d:a75: ICMP6, neighbor advertisement, tgt is fe80::cc2e:58ff:fed3:a058, length 24
+22:25:15.951923 IP6 fe80::cc2e:58ff:fed3:a058 > fe80::a001:7cff:fe5d:a75: ICMP6, neighbor solicitation, who has fe80::a001:7cff:fe5d:a75, length 32
+22:25:15.951998 IP6 fe80::cc2e:58ff:fed3:a058 > fe80::303d:f5ff:fe1c:e9a9: ICMP6, neighbor solicitation, who has fe80::303d:f5ff:fe1c:e9a9, length 32
+22:25:15.952015 IP6 fe80::cc2e:58ff:fed3:a058 > fe80::6c45:83ff:fe5a:d8a9: ICMP6, neighbor solicitation, who has fe80::6c45:83ff:fe5a:d8a9, length 32
+22:25:15.952307 IP6 fe80::6c45:83ff:fe5a:d8a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, neighbor advertisement, tgt is fe80::6c45:83ff:fe5a:d8a9, length 24
+22:25:15.952567 IP6 fe80::a001:7cff:fe5d:a75 > fe80::cc2e:58ff:fed3:a058: ICMP6, neighbor advertisement, tgt is fe80::a001:7cff:fe5d:a75, length 24
+22:25:15.952569 IP6 fe80::303d:f5ff:fe1c:e9a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, neighbor advertisement, tgt is fe80::303d:f5ff:fe1c:e9a9, length 24
+22:25:33.615741 IP6 fe80::6c45:83ff:fe5a:d8a9 > ff02::2: ICMP6, router solicitation, length 16
+
+2:25:05.775068 IP6 fe80::6c45:83ff:fe5a:d8a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, echo reply, seq 1, length 64
+22:25:05.775128 IP6 fe80::a001:7cff:fe5d:a75 > fe80::cc2e:58ff:fed3:a058: ICMP6, echo reply, seq 1, length 64
+22:25:05.775129 IP6 fe80::303d:f5ff:fe1c:e9a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, echo reply, seq 1, length 64
+22:25:06.773919 IP6 fe80::cc2e:58ff:fed3:a058 > ff02::1: ICMP6, echo request, seq 2, length 64
+22:25:06.773978 IP6 fe80::6c45:83ff:fe5a:d8a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, echo reply, seq 2, length 64
+22:25:06.774022 IP6 fe80::a001:7cff:fe5d:a75 > fe80::cc2e:58ff:fed3:a058: ICMP6, echo reply, seq 2, length 64
+22:25:06.774023 IP6 fe80::303d:f5ff:fe1c:e9a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, echo reply, seq 2, length 64
+22:25:10.831766 IP6 fe80::6c45:83ff:fe5a:d8a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, neighbor solicitation, who has fe80::cc2e:58ff:fed3:a058, length 32
+22:25:10.832396 IP6 fe80::cc2e:58ff:fed3:a058 > fe80::6c45:83ff:fe5a:d8a9: ICMP6, neighbor advertisement, tgt is fe80::cc2e:58ff:fed3:a058, length 24
+22:25:10.832286 IP6 fe80::303d:f5ff:fe1c:e9a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, neighbor solicitation, who has fe80::cc2e:58ff:fed3:a058, length 32
+22:25:10.832421 IP6 fe80::cc2e:58ff:fed3:a058 > fe80::303d:f5ff:fe1c:e9a9: ICMP6, neighbor advertisement, tgt is fe80::cc2e:58ff:fed3:a058, length 24
+22:25:10.832289 IP6 fe80::a001:7cff:fe5d:a75 > fe80::cc2e:58ff:fed3:a058: ICMP6, neighbor solicitation, who has fe80::cc2e:58ff:fed3:a058, length 32
+22:25:10.832439 IP6 fe80::cc2e:58ff:fed3:a058 > fe80::a001:7cff:fe5d:a75: ICMP6, neighbor advertisement, tgt is fe80::cc2e:58ff:fed3:a058, length 24
+22:25:15.951923 IP6 fe80::cc2e:58ff:fed3:a058 > fe80::a001:7cff:fe5d:a75: ICMP6, neighbor solicitation, who has fe80::a001:7cff:fe5d:a75, length 32
+22:25:15.951998 IP6 fe80::cc2e:58ff:fed3:a058 > fe80::303d:f5ff:fe1c:e9a9: ICMP6, neighbor solicitation, who has fe80::303d:f5ff:fe1c:e9a9, length 32
+22:25:15.952015 IP6 fe80::cc2e:58ff:fed3:a058 > fe80::6c45:83ff:fe5a:d8a9: ICMP6, neighbor solicitation, who has fe80::6c45:83ff:fe5a:d8a9, length 32
+22:25:15.952307 IP6 fe80::6c45:83ff:fe5a:d8a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, neighbor advertisement, tgt is fe80::6c45:83ff:fe5a:d8a9, length 24
+22:25:15.952567 IP6 fe80::a001:7cff:fe5d:a75 > fe80::cc2e:58ff:fed3:a058: ICMP6, neighbor advertisement, tgt is fe80::a001:7cff:fe5d:a75, length 24
+22:25:15.952569 IP6 fe80::303d:f5ff:fe1c:e9a9 > fe80::cc2e:58ff:fed3:a058: ICMP6, neighbor advertisement, tgt is fe80::303d:f5ff:fe1c:e9a9, length 24
+22:25:33.615741 IP6 fe80::6c45:83ff:fe5a:d8a9 > ff02::2: ICMP6, router solicitation, length 16
+

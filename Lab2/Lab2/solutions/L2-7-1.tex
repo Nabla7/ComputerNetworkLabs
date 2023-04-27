@@ -1,0 +1,7 @@
+The packets relevant to the three way handshake in our trace are packets 2,3 and 4. The flags set in these packet's TCP headers are SYN, SYN-ACK and ACK respectively.
+
+\begin{itemize}
+    \item SYN flag: Indicates that the sender wants to establish a connection. The receiving TCP server (h2) interprets this as a connection request and responds with a SYN-ACK packet.
+    \item SYN-ACK flag combination: Indicates that the server (h2) acknowledges the connection request and sends its own synchronization information. The receiving TCP client (h1) interprets this as an acceptance of the connection request and responds with an ACK packet.
+    \item ACK flag: Indicates that the client (h1) acknowledges the server's (h2) synchronization information. The receiving TCP server (h2) interprets this as the completion of the three-way handshake, and the TCP connection is considered established.
+\end{itemize}

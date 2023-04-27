@@ -1,0 +1,24 @@
+Connecting to host h4, port 5001
+[  7] local fc00:0:0:1::2 port 59460 connected to fc00:0:0:1::4 port 5001
+[ ID] Interval           Transfer     Bitrate         Retr  Cwnd
+[  7]   0.00-1.00   sec   134 KBytes  1.10 Mbits/sec    0   13.9 KBytes       
+[  7]   1.00-2.00   sec  41.8 KBytes   343 Kbits/sec    0   13.9 KBytes       
+[  7]   2.00-3.00   sec  41.8 KBytes   343 Kbits/sec    0   13.9 KBytes       
+[  7]   3.00-4.00   sec  41.8 KBytes   343 Kbits/sec    0   13.9 KBytes       
+[  7]   4.00-5.00   sec  41.8 KBytes   343 Kbits/sec    0   13.9 KBytes       
+[  7]   5.00-6.00   sec  41.8 KBytes   342 Kbits/sec    0   13.9 KBytes       
+[  7]   6.00-7.00   sec  41.8 KBytes   343 Kbits/sec    0   13.9 KBytes       
+[  7]   7.00-8.00   sec  0.00 Bytes  0.00 bits/sec    0   13.9 KBytes       
+[  7]   8.00-9.00   sec  41.8 KBytes   343 Kbits/sec    0   13.9 KBytes       
+[  7]   9.00-10.00  sec  41.8 KBytes   343 Kbits/sec    0   13.9 KBytes       
+[  7]  10.00-11.00  sec  41.8 KBytes   343 Kbits/sec    0   13.9 KBytes       
+[  7]  11.00-12.00  sec  41.8 KBytes   343 Kbits/sec    0   13.9 KBytes       
+[  7]  12.00-13.00  sec  41.8 KBytes   343 Kbits/sec    0   13.9 KBytes       
+[  7]  13.00-14.00  sec  83.7 KBytes   685 Kbits/sec    0   19.5 KBytes       
+[  7]  14.00-15.00  sec  0.00 Bytes  0.00 bits/sec    0   19.5 KBytes       
+[  7]  15.00-16.00  sec  41.8 KBytes   343 Kbits/sec    0   19.5 KBytes       
+[  7]  16.00-16.59  sec  41.8 KBytes   578 Kbits/sec    0   19.5 KBytes       
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Retr
+[  7]   0.00-16.59  sec   761 KBytes   376 Kbits/sec    0             sender
+[  7]   0.00-16.59  sec  0.00 Bytes  0.00 bits/sec                  receiver

@@ -1,0 +1,21 @@
+An example of a fragmented UDP packet is packet number 74. Together with packet 74 itself, packet number 75 forms the entire UDP packet.
+
+For packet 74, the values of the headers are:
+\begin{enumerate}
+	\item Next Header: UDP
+	\item Reserved octet: 0x00
+	\item Offset: 0
+	\item Reserved bits: 0
+	\item More Fragments: Yes
+	\item Identification: 0x3cd4c2b1
+\end{enumerate}
+
+For the fragment in packet 75, the values of the headers are:
+\begin{enumerate}
+	\item Next Header: UDP
+	\item Reserved octet: 0x00
+	\item Offset: 181
+	\item Reserved bits: 0
+	\item More Fragments: No
+	\item Identification: 0x3cd4c2b1
+\end{enumerate}
