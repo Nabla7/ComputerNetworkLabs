@@ -1,0 +1,14 @@
+When the interfaces were brought down, the routes changed faster because OSPF routers quickly detect the loss of a neighbor and the associated link due to the Hello protocol. Routers send Hello packets at regular intervals specified by the Hello Interval parameter (5 seconds) to their neighbors to maintain adjacencies. If a router fails to receive a Hello packet from a neighbor within the specified dead interval (20 seconds), it considers the neighbor and the link as "down."
+
+As soon as the link is considered down, the router generates a new LSA to inform other routers about the topology change. LSAs are flooded throughout the OSPF domain, and upon receiving the updated LSAs, other routers update their LSDBs and recalculate the shortest paths using the SPF algorithm. This process happens relatively quickly, leading to faster route changes when the interface was brought down.
+
+When the interfaces are brought back up, the process of re-establishing OSPF adjacencies and exchanging routing information takes more time:
+
+\begin{enumerate}
+  \item Routers send Hello packets to discover neighbors and establish adjacencies. This process depends on the hello\_int parameter, which defines the interval between Hello packets. The time it takes to form an adjacency depends on how quickly the routers exchange these packets and the dead interval configured.
+  \item After adjacencies are established, routers exchange their LSDBs using DB Description, LS Request, LS Update, and LS Acknowledge packets. This process may took some time.
+  \item Once the LSDBs are updated, routers run the SPF algorithm to calculate new shortest paths and update their routing tables. The time required for this calculation depends on the size and complexity of the network topology.
+\end{enumerate}
+
+It takes longer for the routes to change when the interfaces are brought back up because the process of re-establishing OSPF adjacencies, exchanging routing information, and updating LSDBs is more time-consuming than detecting a lost neighbor and flooding the updated LSAs when a link goes down.
+

@@ -1,0 +1,33 @@
+R1 routes:
+
+fc00:0:0:1::/64 dev r1-eth0 proto kernel metric 256 pref medium
+fc00:0:0:2::/64 dev r1-eth1 proto kernel metric 256 pref medium
+fc00:0:0:3::/64 via fc00:0:0:2::11 dev r1-eth1 metric 1024 pref medium
+fe80::/64 dev r1-eth0 proto kernel metric 256 pref medium
+fe80::/64 dev r1-eth1 proto kernel metric 256 pref medium
+
+R2 routes:
+
+fc00:0:0:1::/64 via fc00:0:0:2::10 dev r2-eth1 metric 1024 pref medium
+fc00:0:0:2::/64 dev r2-eth1 proto kernel metric 256 pref medium
+fc00:0:0:3::/64 dev r2-eth0 proto kernel metric 256 pref medium
+fe80::/64 dev r2-eth0 proto kernel metric 256 pref medium
+fe80::/64 dev r2-eth1 proto kernel metric 256 pref medium
+
+H1 routes:
+
+fc00:0:0:1::/64 dev h1-eth0 proto kernel metric 256 pref medium
+fe80::/64 dev h1-eth0 proto kernel metric 256 pref medium
+default via fc00:0:0:1::10 dev h1-eth0 metric 1024 pref medium
+
+H2 routes:
+
+fc00:0:0:2::/64 dev h2-eth0 proto kernel metric 256 pref medium
+fe80::/64 dev h2-eth0 proto kernel metric 256 pref medium
+default via fc00:0:0:2::11 dev h2-eth0 metric 1024 pref medium
+
+H3 routes:
+
+fc00:0:0:3::/64 dev h3-eth0 proto kernel metric 256 pref medium
+fe80::/64 dev h3-eth0 proto kernel metric 256 pref medium
+default via fc00:0:0:3::10 dev h3-eth0 metric 1024 pref medium

@@ -1,0 +1,15 @@
+For the traceroute output from h1a:
+\begin{enumerate}[label=\arabic*.]
+    \item h1a $\to$ h1b: h1a (as1ra) $\to$ as1rb $\to$ h1b. This route has a total cost of 1 (as the link between as1ra and as1rb has an IGP metric of 1).
+    \item h1a $\to$ h1c: h1a (as1ra) $\to$ as1rc $\to$ h1c. This route has a total cost of 2 (as the link between as1ra and as1rc has an IGP metric of 2).
+    \item h1a $\to$ h1d: h1a (as1ra) $\to$ as1rd $\to$ h1d. This route has a total cost of 3 (as the link between as1ra and as1rd has an IGP metric of 3).
+\end{enumerate}
+
+For the traceroute output from h1d:
+\begin{enumerate}[label=\arabic*.]
+    \item h1d $\to$ h1a: h1d (as1rd) $\to$ as1ra $\to$ h1a. This route has a total cost of 3 (as the link between as1rd and as1ra has an IGP metric of 3).
+    \item h1d $\to$ h1b: h1d (as1rd) $\to$ as1ra $\to$ as1rb $\to$ h1b. This route has a total cost of 4 (3 from as1rd to as1ra and 1 from as1ra to as1rb).
+    \item h1d $\to$ h1c: h1d (as1rd) $\to$ as1ra $\to$ as1rc $\to$ h1c. This route has a total cost of 5 (3 from as1rd to as1ra and 2 from as1ra to as1rc).
+\end{enumerate}
+
+These routes are chosen because they have the lowest total cost based on the IGP metric, which is the primary factor that OSPF uses to determine the shortest path.

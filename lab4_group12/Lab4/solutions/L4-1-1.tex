@@ -1,0 +1,15 @@
+\includetrace{pingall.txt}
+\includetrace{routes.before.txt}
+
+We initially have no routing tables set up in any of our routers. However, using the neighbour discovery protocol, hosts may still learn of routers that can forward their packets. Host $h_2$ in particular learns of router $R_2$ to send its packets to. $h_1$ learns of router $r_1$, and $h_3$ learns of router $r_2$.
+
+There are 6 pings:\\
+
+\begin{enumerate}
+    \item $H_1 \mapsto H_2$ (FAILED): H1 is able to send a ping request to H2, but H2 has no route for this IP address and forwards the response to the router it knows, $R_2$. This router's routing table is empty and no direct neighbours are the destination, the router thus drops the packet
+    \item $H_1 \mapsto H_3$ (FAILED): H1 sends the packet to R1, but since R1 has no route to this destination, it sends back the ICMPv6 message "Destination unreachable: No route"
+    \item $H_2 \mapsto H_1$ (FAILED): H2 has no route for this packet, so it forwards it to the router it knows, R2. R2 then drops the packet, it sends back the ICMPv6 message "Destination unreachable: No route"
+    \item $H_2 \mapsto H_3$ (SUCCEEDED): H2 sends the packet to R2, which has a route to H3
+    \item $H_3 \mapsto H_1$ (FAILED): H3 sends the packet to R2, but since R2 has no route to this destination, it sends back the ICMPv6 message "Destination unreachable: No route"
+    \item $H_3 \mapsto H_2$ (SUCCEEDED): H3 sends the packet to R2, which has a route to H2. Because R2 is used rather than R1, the response also gets back to H3
+\end{enumerate}

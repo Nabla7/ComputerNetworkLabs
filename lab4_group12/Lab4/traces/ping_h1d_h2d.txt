@@ -1,0 +1,295 @@
+PING h2d(h2d (fc00:0:2:d::2)) 56 data bytes
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=1 ttl=60 time=0.151 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=2 ttl=60 time=0.187 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=3 ttl=60 time=0.417 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=4 ttl=60 time=0.231 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=5 ttl=60 time=0.317 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=6 ttl=60 time=0.239 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=7 ttl=60 time=0.162 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=8 ttl=60 time=0.132 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=9 ttl=60 time=0.127 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=10 ttl=60 time=0.203 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=11 ttl=60 time=0.187 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=12 ttl=60 time=0.217 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=13 ttl=60 time=0.239 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=14 ttl=60 time=0.219 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=15 ttl=60 time=0.581 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=16 ttl=60 time=0.124 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=17 ttl=60 time=0.092 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=18 ttl=60 time=0.162 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=19 ttl=60 time=0.163 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=20 ttl=60 time=0.194 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=21 ttl=60 time=0.222 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=22 ttl=60 time=0.162 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=23 ttl=60 time=0.097 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=24 ttl=60 time=0.158 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=25 ttl=60 time=0.238 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=26 ttl=60 time=0.214 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=27 ttl=60 time=0.217 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=28 ttl=60 time=0.124 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=29 ttl=60 time=0.371 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=30 ttl=60 time=0.224 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=31 ttl=60 time=0.083 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=32 ttl=60 time=0.294 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=33 ttl=60 time=0.185 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=34 ttl=60 time=0.178 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=35 ttl=60 time=0.634 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=36 ttl=60 time=0.106 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=37 ttl=60 time=0.174 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=38 ttl=60 time=0.610 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=39 ttl=60 time=0.187 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=40 ttl=60 time=0.123 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=41 ttl=60 time=0.546 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=42 ttl=60 time=0.249 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=43 ttl=60 time=0.216 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=44 ttl=60 time=0.380 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=45 ttl=60 time=0.232 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=46 ttl=60 time=0.143 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=47 ttl=60 time=0.124 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=48 ttl=60 time=0.203 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=49 ttl=57 time=0.324 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=50 ttl=57 time=0.250 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=51 ttl=57 time=0.242 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=52 ttl=57 time=0.409 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=53 ttl=57 time=0.292 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=54 ttl=57 time=0.211 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=55 ttl=57 time=0.233 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=56 ttl=57 time=0.234 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=57 ttl=57 time=0.210 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=58 ttl=57 time=0.155 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=59 ttl=57 time=0.544 ms
+64 bytes from h2d (fc00:0:2:d::2): icmp_seq=60 ttl=57 time=0.142 ms
+From as1rd (fc00:0:1:d::d) icmp_seq=61 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=62 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=63 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=64 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=65 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=66 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=67 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=68 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=69 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=70 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=71 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=72 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=73 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=74 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=75 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=76 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=77 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=78 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=79 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=80 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=81 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=82 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=83 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=84 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=85 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=86 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=87 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=88 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=89 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=90 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=91 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=92 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=93 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=94 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=95 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=96 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=97 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=98 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=99 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=100 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=101 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=102 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=103 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=104 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=105 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=106 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=107 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=108 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=109 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=110 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=111 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=112 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=113 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=114 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=115 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=116 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=117 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=118 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=119 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=120 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=121 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=122 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=123 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=124 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=125 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=126 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=127 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=128 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=129 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=130 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=131 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=132 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=133 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=134 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=135 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=136 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=137 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=138 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=139 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=140 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=141 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=142 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=143 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=144 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=145 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=146 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=147 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=148 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=149 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=150 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=151 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=152 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=153 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=154 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=155 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=156 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=157 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=158 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=159 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=160 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=161 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=162 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=163 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=164 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=165 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=166 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=167 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=168 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=169 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=170 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=171 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=172 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=173 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=174 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=175 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=176 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=177 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=178 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=179 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=180 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=181 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=182 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=183 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=184 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=185 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=186 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=187 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=188 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=189 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=190 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=191 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=192 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=193 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=194 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=195 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=196 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=197 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=198 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=199 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=200 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=201 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=202 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=203 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=204 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=205 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=206 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=207 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=208 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=209 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=210 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=211 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=212 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=213 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=214 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=215 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=216 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=217 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=218 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=219 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=220 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=221 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=222 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=223 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=224 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=225 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=226 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=227 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=228 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=229 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=230 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=231 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=232 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=233 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=234 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=235 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=236 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=237 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=238 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=239 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=240 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=241 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=242 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=243 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=244 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=245 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=247 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=248 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=249 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=250 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=251 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=252 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=253 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=254 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=255 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=256 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=257 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=258 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=259 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=260 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=261 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=262 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=263 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=264 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=265 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=266 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=267 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=268 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=269 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=270 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=271 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=272 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=273 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=274 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=275 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=276 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=277 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=278 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=279 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=280 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=281 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=282 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=283 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=284 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=285 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=286 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=287 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=288 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=289 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=290 Destination unreachable: No route
+From as1rd (fc00:0:1:d::d) icmp_seq=291 Destination unreachable: No route
+
+--- h2d ping statistics ---
+291 packets transmitted, 60 received, +230 errors, 79.3814% packet loss, time 2964859ms
+rtt min/avg/max/mdev = 0.083/0.238/0.634/0.127 ms

@@ -1,0 +1,22 @@
+Initially, the route was as follows:
+\begin{enumerate}
+    \item as1rb: this is the only router attached to h1b
+    \item as1rc: AS1's border gateway router with AS2
+    \item as2ra: AS2's border gateway router with AS1
+    \item as2rb: this is the only router attached to h2b
+    \item h2b: the destination
+\end{enumerate}
+
+After bringing the interface down, the route changed to:
+\begin{enumerate}
+    \item as1rb: this is the only router attached to h1b
+    \item as1ra: AS1's border gateway router with AS3
+    \item as3rc: AS3's border gateway router with AS1
+    \item as3ra: AS3's border gateway router with AS2
+    \item as2rc: AS2's border gateway router with AS3
+    \item as2rb: this is the only router attached to h2b
+    \item h2b: the destination
+\end{enumerate}
+
+From the traceroute, it can be seen that the traffic is routed through AS3, since a necessary interface in the border gateway router between AS1 and AS2 was brought down. After bringing the interface back up, the original route is restored.\\
+

@@ -1,0 +1,12 @@
+In packet 408, we can see router AS1RC withdrawing its routes for all subnets in AS2, since the link to AS2 went down. Since router AS1RA also receives this update (withdrawal) message, it is able to compute that the routes it has for AS2 are now the preferred route to AS2. AS1RA thus sends an UPDATE message (packet number 410) to AS1RB, which previously has its route to subnets in AS2 withdrawn. AS1RB now has the routes passing through AS3 set.\\
+
+For the update message, the following specific headers are used:
+\begin{enumerate}
+    \item Withdrawn Routes: a list of prefixes to be withdrawn
+    \item Address family identifier: to distinguish between IPv4 and IPv6 v6 addresses
+    \item Next Hop: the IP address of the next-hop router that will forward the packets towards the destination
+    \item Path Attributes: a list of attributes that provide additional information about the path to the destination, such as the AS Path, the Local Preference, the Multi-Exit Discriminator (MED), and others.
+\end{enumerate}
+In this case, when AS1RC withdraws its routes for subnets in AS2, it sends an UPDATE message with the Withdrawn Routes header containing the prefixes for the subnets that are no longer reachable. The Address Family Identifier header indicates the type of address (IPv4 in this case). The Next Hop header is set to the IP address of AS1RC, since it is the next-hop router for those prefixes.
+When AS1RA sends an UPDATE message to AS1RB, it includes the Path Attributes header with the AS Path attribute, which indicates the sequence of ASes that the route has traversed. In this case, the AS Path includes AS1RA and AS3, since the route is now passing through AS3 to reach AS2. 
+

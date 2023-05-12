@@ -1,0 +1,10 @@
+The routers use OSPF to exchange routing information with their neighbors by sending OSPF packets. When a link is established, routers exchange Hello packets to discover neighbors and form adjacencies. After the adjacency is formed, routers exchange their LSDBs, DB Description packets, LS Request packets, LS Update packets, and Link-LS Acknowledge packets.
+
+
+When the link between as1rb and as1rd is established again, we can see from the Wireshark traces that the routers exchange DB Description, LS Request, LS Update, and LS Acknowledge packets (lines 1877-1891, 1905, and 1906). This exchange allows the routers to update their LSDBs, which contain information about the network's topology.
+
+
+Similarly, when the link between as1ra and as1rb is established again, we can see the routers exchange LS Update and LS Acknowledge packets (lines 2667 and 2681). 
+
+
+When the link between as1ra and as1rc is established again, we can also see the routers exchange LS Update and LS Acknowledge packets (lines 2761-2762, 2770, and 2771).

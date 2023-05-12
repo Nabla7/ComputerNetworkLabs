@@ -1,0 +1,18 @@
+After bringing down the first interface (between as1ra and as1rc), the route from h1a to h1c and the route from h1d to h1c changed. Here are the new routes:
+
+From h1a to h1c:
+\begin{enumerate}[label=\arabic*.]
+    \item h1a $\to$ as1ra (fc00:0:1:a::a)
+    \item as1ra $\to$ as1rb (fc00:0:1:ab::b)
+    \item as1rb $\to$ as1rc (fc00:0:1:bc::c)
+    \item as1rc $\to$ h1c (fc00:0:1:c::1)
+\end{enumerate}
+
+From h1d to h1c:
+\begin{enumerate}[label=\arabic*.]
+    \item h1d $\to$ as1rd (fc00:0:1:d::d)
+    \item as1rd $\to$ as1rc (fc00:0:1:cd::c)
+    \item as1rc $\to$ h1c (fc00:0:1:c::1)
+\end{enumerate}
+
+The reason for the route change is that the link between as1ra and as1rc was brought down. As a result, the shortest path from h1a to h1c now goes through as1rb, and the shortest path from h1d to h1c doesn't change, but the link between as1rd and as1rc is used instead. The other routes remain the same as before because they were not affected by the change in the network topology.

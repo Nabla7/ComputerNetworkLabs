@@ -1,0 +1,33 @@
+\begin{enumerate}[label=\arabic*.]
+\item OSPF Hello Packets (Packets 822, 823, 840, and 841, but there are many more):\\
+Hello packets are used to discover OSPF neighbors and maintain adjacencies between them. These packets contain the following fields in our case:
+  \begin{enumerate}[label=\arabic*.]
+  \item Interface ID: A unique identifier for the OSPF-enabled interface on the router.
+  \item Router Priority: A value used to determine the designated router (DR) and backup designated router (BDR) on a broadcast network segment.
+  \item Options: Flags that indicate optional OSPF capabilities supported by the router (R: Router, E: External Routing, V6: OSPF for IPv6).
+  \item Hello Interval: The time interval (in seconds) between the periodic Hello packets sent by the router on the OSPF interface.
+  \item Router Dead Interval: The time interval (in seconds) for which a neighbor must receive a Hello packet before considering the neighbor as down.
+  \item Designated Router: The router ID of the designated router on the network segment.
+  \item Backup Designated Router: The router ID of the backup designated router on the network segment.
+  \item Active Neighbor: The router IDs of the neighbors with which the router has established an adjacency.
+  \end{enumerate}
+
+\item OSPF LS Update Packets (Packets 830 and 831):\\
+LS Update packets are used to share link-state information between OSPF routers. These packets contain one or more Link-State Advertisements (LSAs) that describe the router's local links and their associated costs. The main fields in an LSA include:
+  \begin{enumerate}[label=\arabic*.]
+  \item Number of LSAs: The number of Link-State Advertisements (LSAs) contained in the LS Update packet.
+  \item LS Age: The time (in seconds) since the LSA was originated.
+  \item Do Not Age: A flag indicating whether the LSA should age or not.
+  \item LS Type: The type of LSA (e.g., 0x2001 for Router-LSA).
+  \item Link State ID: A unique identifier for the LSA.
+  \item Advertising Router: The router ID of the router that originated the LSA.
+  \item Sequence Number: A number that increments with each new instance of the LSA to detect old or duplicate LSAs.
+  \item Checksum: A checksum used for error detection.
+  \item Length: The length of the LSA, including the LSA header.
+  \item Flags: Flags specific to the LSA type.
+  \item Options: Flags that indicate optional OSPF capabilities supported by the router (same as in the Hello packet).
+  \end{enumerate}
+
+\item OSPF LS Acknowledge Packets (Packets 846 and 847):\\
+LS Acknowledge packets are sent in response to received LS Update packets, confirming that the recipient router has received and processed the LSAs. These packets contain the same LSA headers as in the corresponding LS Update packets.
+\end{enumerate}

@@ -1,0 +1,19 @@
+The following types of BGP messages were identified:
+\begin{enumerate}
+    \item OPEN Message
+    \item KEEPALIVE Message
+    \item UPDATE Message
+    \item ROUTE-REFRESH
+\end{enumerate}
+
+\subsubsection{OPEN Message}
+One example of an OPEN packet in our trace is packet number 20. Each router within an autonomous system sends an OPEN message to every other router in that autonomous system, forming a full mesh. These messages use TCP as its underlying transport protocol and are meant to establish a connection such that routers can exchange reachability information.
+
+\subsubsection{KEEPALIVE Message}
+One example of a KEEPALIVE packet in our trace is packet number 52. These messages are sent periodically to verify that the peer router is still operational. A KEEPALIVE message gets a plain TCP response, as can be seen in packet number 53.
+
+\subsubsection{UPDATE Message}
+One example of a UPDATE packet in our trace is packet number 55. These also receive a plain TCP response to confirm the peer has received the message. These messages are only sent in response to events on the network. For example, if a link goes down, an UPDATE message will be sent to update reachability information. 
+
+\subsubsection{ROUTE-REFRESH}
+One example of a ROUTE-REFRESH packet in our trace is packet number 68. These are used to request peers to send what routes they have for a certain IP address.
